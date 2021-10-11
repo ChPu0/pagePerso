@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+   <h1>BandCamp</h1>
+    <h2>Le site pour rencontrer des musiciens</h2>
+    <div>Retrouvez les derniers membres inscrits :</div>
+    <section>
+        {% for membre in membres %}
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+            <a href="{{ path('main_profil', {'id': membre.id}) }}"><h5 class="card-title">{{ membre.pseudo|upper }}</h5></a>
+            <img src="{{ asset('img/rockPic.jpg') }}" class="card-img-top" alt="Logo Rock">
+            {% for info in membre.infos %}
+                <p class="card-text">Instrument : {{ info.instrument }}</p>
+                <p class="card-text">Style : {{ info.style }}</p>
+            {% endfor %}
+                <a href="{{ path('main_profil', {'id': membre.id}) }}" class="btn btn-primary">Let's Rock</a>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+
+{% endblock %}
+
+{% block title %}
+    {{ parent() }} | Home
+{% endblock %}
+

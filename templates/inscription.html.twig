@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <h1>Inscription</h1>
+    {{ form_start(membreForm) }}
+    {{ form_widget(membreForm) }}
+    <button>Valider</button>
+    {{ form_end(membreForm) }}
+{% endblock %}
+
+{% block title %}
+    {{ parent () }} | Inscription
+{% endblock %}
+

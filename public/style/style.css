@@ -1,0 +1,12 @@
+body {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #121212;
+}
+
+a:hover {
+    color: #B0413E;
+}

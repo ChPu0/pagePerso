@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Voici le profil de :</h1>
+    <div>Pseudo : {{ membre.pseudo }}</div>
+    <div>Ville : {{ membre.city }}</div>
+    <div>Email : {{ membre.email }}</div>
+
+    {% for info in membre.infos %}
+        <div>Instrument : {{ info.instrument }}</div>
+        <div>Style : {{ info.style }}</div>
+        <div>Niveau : {{ info.niveau}}</div>
+    {% endfor %}
+
+{% endblock %}
+
+{% block title %}
+    {{ parent() }} | Profil
+{% endblock %}
+

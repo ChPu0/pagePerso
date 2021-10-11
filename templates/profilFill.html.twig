@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Profil</h1>
+    {{ form_start(infosForm) }}
+    {{ form_widget(infosForm) }}
+    <button>Valider</button>
+    {{ form_end(infosForm) }}
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
